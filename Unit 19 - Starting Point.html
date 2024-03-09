@@ -4,72 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Pythagoras Calculator</title>
-    <style>
-      input,
-      button {
-        font-size: 1.5rem;
-        margin-top: 10px;
-      }
-
-      body {
-        padding: 20px;
-      }
-
-      h1 {
-        color: red;
-      }
-
-      .center {
-        display: flex;
-        justify-content: center;
-      }
-
-      #solution-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      label {
-        font-size: 2em;
-        font-weight: bold;
-        font-family: monospace;
-      }
-
-      #calculation {
-        flex-grow: 1;
-        font-size: 1.3em;
-        line-height: 30px;
-      }
-
-      #calculation b {
-        display: block;
-        text-align: center;
-      }
-
-      button {
-        background-color: red;
-        color: white;
-        border-radius: 10px;
-        border: none;
-        padding: 5px 10px;
-        font-size: 1.5em;
-        flex-grow: 1;
-      }
-
-      .sol {
-        font-weight: bold;
-        border-bottom: black double 5px;
-      }
-
-      #buttons {
-        display: flex;
-        gap: 20px;
-      }
-    </style>
+    
   </head>
 
   <body>
@@ -126,47 +63,6 @@
       </div>
     </div>
 
-    <script>
-      function calculate() {
-        let a = document.getElementById("a").value;
-        let b = document.getElementById("b").value;
-        let c = document.getElementById("c").value;
-        const solution = document.getElementById("solution");
-
-        if (a == "") {
-          console.log("Solving for a");
-          solution.innerHTML = "Solving for : a <br>";
-          solution.innerHTML += "a = √(c<sup>2</sup> - b<sup>2</sup>) <br>";
-          solution.innerHTML +=
-            "a = √(" + c + "<sup>2</sup> - " + b + "<sup>2</sup>) <br>";
-          solution.innerHTML += "a = √(" + c * c + " - " + b * b + ") <br>";
-          a = Math.sqrt(c * c - b * b);
-          solution.innerHTML += "a = " + a + "<br>";
-          document.getElementById("a").value = a;
-        } else if (b == "") {
-          console.log("Solving for b");
-          solution.innerHTML = "Solving for : b <br>";
-          solution.innerHTML += "b = √(c<sup>2</sup> - a<sup>2</sup>) <br>";
-          solution.innerHTML +=
-            "b = √(" + c + "<sup>2</sup> - " + a + "<sup>2</sup>) <br>";
-          solution.innerHTML += "b = √(" + c * c + " - " + a * a + ") <br>";
-          b = Math.sqrt(c * c - a * a);
-          solution.innerHTML += "b = " + b + "<br>";
-          document.getElementById("b").value = b;
-        } else if (c == "") {
-          console.log("Solving for c");
-          solution.innerHTML = "Solving for : c <br>";
-          solution.innerHTML += "c = √(a<sup>2</sup> + b<sup>2</sup>) <br>";
-          solution.innerHTML +=
-            "c = √(" + a + "<sup>2</sup> + " + b + "<sup>2</sup>) <br>";
-          solution.innerHTML += "c = √(" + a * a + " + " + b * b + ") <br>";
-          c = Math.sqrt(a * a + b * b);
-          solution.innerHTML += "c = " + c + "<br>";
-          document.getElementById("c").value = c;
-        } else {
-          alert("Please leave one side empty to solve the problem");
-        }
-      }
-    </script>
+    <script src="Script.js"></script>
   </body>
 </html>
