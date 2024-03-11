@@ -10,6 +10,13 @@ body {
 
 h1 {
   color: red;
+  text-align: center;
+  font-size: 350%;
+  margin-top: 0;
+}
+
+h3 {
+  text-align: center;
 }
 
 .center {
@@ -60,4 +67,11 @@ button {
 #buttons {
   display: flex;
   gap: 20px;
+}
+
+img {
+  max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+  height: auto; /* Allows the image to maintain its aspect ratio */
+  display: block; /* Makes the image a block element to center it */
+  margin: 0 auto; /* Centers the image horizontally */
 }

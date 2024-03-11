@@ -12,8 +12,9 @@ function calculate() {
       "a = √(" + c + "<sup>2</sup> - " + b + "<sup>2</sup>) <br>";
     solution.innerHTML += "a = √(" + c * c + " - " + b * b + ") <br>";
     a = Math.sqrt(c * c - b * b);
-    solution.innerHTML += "a = " + a + "<br>";
-    document.getElementById("a").value = a;
+    var formatResults = a.toFixed(2);
+    solution.innerHTML += "a = " + formatResults + "<br>";
+    document.getElementById("a").value = formatResults;
   } else if (b == "") {
     console.log("Solving for b");
     solution.innerHTML = "Solving for : b <br>";
@@ -22,8 +23,9 @@ function calculate() {
       "b = √(" + c + "<sup>2</sup> - " + a + "<sup>2</sup>) <br>";
     solution.innerHTML += "b = √(" + c * c + " - " + a * a + ") <br>";
     b = Math.sqrt(c * c - a * a);
-    solution.innerHTML += "b = " + b + "<br>";
-    document.getElementById("b").value = b;
+    var formatResults = b.toFixed(2);
+    solution.innerHTML += "b = " + formatResults + "<br>";
+    document.getElementById("b").value = formatResults;
   } else if (c == "") {
     console.log("Solving for c");
     solution.innerHTML = "Solving for : c <br>";
@@ -32,9 +34,21 @@ function calculate() {
       "c = √(" + a + "<sup>2</sup> + " + b + "<sup>2</sup>) <br>";
     solution.innerHTML += "c = √(" + a * a + " + " + b * b + ") <br>";
     c = Math.sqrt(a * a + b * b);
-    solution.innerHTML += "c = " + c + "<br>";
-    document.getElementById("c").value = c;
+    var formatResults = c.toFixed(2);
+    solution.innerHTML += "c = " + formatResults + "<br>";
+    document.getElementById("c").value = formatResults;
   } else {
     alert("Please leave one side empty to solve the problem");
   }
 }
+// Reset Button
+
+function resetValues() {
+  document.getElementById("a").value = "";
+  document.getElementById("b").value = "";
+  document.getElementById("c").value = "";
+  document.getElementById("solution").innerHTML = "";
+}
+
+
+
